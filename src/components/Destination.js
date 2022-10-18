@@ -5,15 +5,15 @@ const Destination = () => {
 
     const sliderleft = () => {
         var slider = document.getElementById('slider')
-        slider.scrollLeft = slider.scrollLeft - 500
+        slider.scrollLeft = slider.scrollLeft - 400
     }
     const sliderright = () => {
         var slider = document.getElementById('slider')
-        slider.scrollLeft = slider.scrollLeft + 500
+        slider.scrollLeft = slider.scrollLeft + 400
     }
 
     return (
-        <div>
+        <div className="">
             <h1 className='text-5xl text-center mb-8 mt-3'>HOTELS BASED ON CITIES</h1>
             <div className=' flex items-center gap-8'>
                 <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100' size={40} onClick={sliderleft} />
