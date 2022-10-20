@@ -1,6 +1,9 @@
 import React from 'react'
-
+import Openingsoon from '../pop_over/Openingsoon'
+import {useState} from 'react'
 const Booking = () => {
+  const [visible,setVisible]=useState(false)
+  const close_visbile=()=>setVisible(false)
   return (
     <div className="booking  text-white">
         <div>
@@ -8,7 +11,7 @@ const Booking = () => {
         </div>
 <div class="flex items-center justify-center p-12">
   <div class="mx-auto w-full max-w-[550px]">
-    <form action="https://formbold.com/s/FORM_ID" method="POST">
+    {/* <form > */}
       <div class="-mx-3 flex flex-wrap">
         <div class="w-full px-3 sm:w-1/2">
           <div class="mb-5">
@@ -136,12 +139,14 @@ const Booking = () => {
       <div>
         <button
           class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+          onClick={()=>setVisible(!visible)}
         >
           Submit
         </button>
       </div>
-    </form>
+    {/* </form> */}
   </div>
+  <Openingsoon close_visbile={close_visbile} visible={visible}/>
 </div>
 
     </div>

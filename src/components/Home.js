@@ -1,9 +1,21 @@
 import { useState } from "react";
+<<<<<<< Updated upstream
 
 export const Header = () => {
     return (
       <div className="bg-purple-900 header-hotel">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+=======
+import merostaybanner from "../assets/mero_stay_banner.png"
+// import { Header } from './Home'
+import Booking from './Booking';
+import Destination from './Destination';
+import About from './About'
+export const Header = () => {
+  return (
+    <div className=" header-hotel">
+      {/* <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+>>>>>>> Stashed changes
           <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
             <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
               <a href="/" className="mb-6 sm:mx-auto">
@@ -51,7 +63,20 @@ export const Header = () => {
               </div>
             </div>
           </div>
+<<<<<<< Updated upstream
         </div>
+=======
+        </div> */}
+      
+      <div className="header_img relative" blurhash="LEHV6nWB2yk8pyo0adR*.7kCMdnj">
+        <img className="w-full" src={merostaybanner} alt="" loading="lazy" />
+        <button className="absolute sm:bottom-20 sm:left-[44%] bg-[rgb(17,24,39)] sm:p-4 font-bold sm:text-2xl text-gray-400 hover:bg-[rgb(14,20,32)] ease-in-out duration-300 hover:scale-110 bottom-4 left-[40%] p-1.5 text-[16px]">Book Now</button>
+>>>>>>> Stashed changes
       </div>
-    );
-  };
+      <Booking />
+      <Destination />
+      <About />
+      
+    </div>
+  );
+};

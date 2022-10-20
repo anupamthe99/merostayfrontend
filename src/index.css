@@ -23,5 +23,28 @@
     background-size: cover;
     background-position: center;
     color:rgb(17,24,39);
+<<<<<<< Updated upstream
     font-family: 'Source Sans Pro', sans-serif;
 }
+=======
+    font-family: 'Source Sans Pro', sans-serif; */
+}
+
+.signup-banner{
+    background-image:url("./assets/signup_banner.png");
+    border-radius: 20px;
+    
+}
+
+
+
+            /* <Link className="flex justify-center items-center " to="/">
+                            <img src="https://merostay.com/static/media/logo.d81f387b65558eaaa98f.jpeg" alt="" className="h-[50px] rounded-full"  />
+                            <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
+                                merostay.com
+                            </span>
+                    </Link> 
+                    
+                    
+                    inline-flex items-center mr-8*/
+>>>>>>> Stashed changes

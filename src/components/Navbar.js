@@ -1,4 +1,5 @@
 import { useState} from "react";
+import { Link } from "react-router-dom";
 export const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -7,27 +8,24 @@ export const Nav = () => {
             <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div class="relative flex items-center justify-between">
                     <div class="flex items-center">
-                        <a
-                            href="/"
-                            aria-label="Company"
-                            title="Company"
-                            class="inline-flex items-center mr-8"
-                        >
+                    <Link className="inline-flex items-center mr-8" to="/">
                             <img src="https://merostay.com/static/media/logo.d81f387b65558eaaa98f.jpeg" alt="" className="h-[50px] rounded-full"  />
                             <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                                 merostay.com
                             </span>
-                        </a>
+                    </Link>
+         
+                  
                         <ul class="flex items-center hidden space-x-8 lg:flex">
                             <li>
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/"
                                     aria-label="Our product"
                                     title="Our product"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                 >
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a
@@ -40,47 +38,47 @@ export const Nav = () => {
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/booking"
                                     aria-label="Product pricing"
                                     title="Product pricing"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                 >
                                     Booking
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/about"
                                     aria-label="About us"
                                     title="About us"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                 >
                                     About us
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
                     <ul class="flex items-center hidden space-x-8 lg:flex">
                         <li>
-                            <a
-                                href="/"
+                            <Link
+                                to="/login"
                                 aria-label="Sign in"
                                 title="Sign in"
                                 class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                             >
                                 Sign in
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/"
-                                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                            <Link
+                                to="/signup"
+                                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md  focus:shadow-outline focus:outline-none"
                                 aria-label="Sign up"
                                 title="Sign up"
                             >
                                 Sign up
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div class="lg:hidden">
@@ -106,8 +104,8 @@ export const Nav = () => {
                             </svg>
                         </button>
                         {isMenuOpen && (
-                            <div class="absolute top-0 left-0 w-full">
-                                <div class="p-5 bg-white border rounded shadow-sm">
+                            <div class="absolute top-0 left-0 w-full ">
+                                <div class="p-5 border rounded shadow-sm">
                                     <div class="flex items-center justify-between mb-4">
                                         <div>
                                             <a
@@ -193,7 +191,7 @@ export const Nav = () => {
                                             <li>
                                                 <a
                                                     href="/"
-                                                    class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                    class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md  focus:shadow-outline focus:outline-none"
                                                     aria-label="Sign up"
                                                     title="Sign up"
                                                 >

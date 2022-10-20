@@ -1,19 +1,31 @@
 import './App.css';
-import { Nav } from './components/Navbar'
+
 import { Header } from './components/Home'
-import Booking from './components/Booking';
-import Destination from './components/Destination';
 import About from './components/About'
-import Footer from './components/Footer'
+import {Nav} from './components/Navbar'
+import Booking from './components/Booking';
+import Signup from './components/auth/Signup'
+import Login from './components/auth/Login'
+import Openingsoon from './pop_over/Openingsoon'
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="">
-      <Nav />
-      <Header />
-      <Booking />
-      <Destination/>
-      <About/>
-      <Footer/>
+<Router>
+    <Nav/>
+  <Routes>
+    <Route path="/" element={<Header/>}/>
+    <Route path="/about" element={<About/>}/>
+    <Route path="/booking" element={<Booking/>}/>
+    <Route path="/signup" element={<Signup/>}/>
+    <Route path="/login" element={<Login/>}/>
+    <Route path="*" element={<h1 className="text-6xl text-center my-[10%]">404 page not found</h1>}/>
+    {/* <Route path="/op" element={<Openingsoon/>}/> */}
+  </Routes>
+  <Footer/>
+</Router>
+
     </div>
   );
 }
