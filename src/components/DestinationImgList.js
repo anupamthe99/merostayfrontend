@@ -1,48 +1,32 @@
 export const data=[
     {
         id:1,
-        img:'https://www.aimwaytours.com/pagegallery/pokhara-city-full-day-tour16.jpeg',
-        name:'Pokhara',
+        img:'https://cdn.kimkim.com/files/a/content_articles/featured_photos/656bb11870d1786be69ae178e45d0723244384c6/big-3985131bf28128fdc4c2ffcd12779cb0.jpg',
+        name:'Kathmandu',
     },
     {
         id:2,
-        img:'https://www.breakfreeadventures.com/wp-content/uploads/Chitwan-National-Park-Tour-1.jpg',
-        name:'Chitwan',
+        img:'https://www.tripdeal365.com/wp-content/uploads/2020/01/Patan-Durbar-Squre.jpg',
+        name:'Lalitpur',
     },
     {
         id:3,
-        img:'https://nepaltourismhub.com/illion-asset/uploads/2020/01/butwal-1.jpg',
-        name:'Butwal',
+        img:'https://www.encountersnepal.com/assets/images/tour-in-nepal/day-tour-in-nepal/bhaktapur.jpg',
+        name:'Bhaktapur',
     },
     {
         id:4,
-        img:'https://i0.wp.com/imfreee.com/wp-content/uploads/2021/02/Exploring-Besisahar-Lamjung-Nepal-scaled.jpg?ssl=1',
-        name:'Besisahar',
+        img:'https://pix10.agoda.net/hotelImages/287/287692/287692_14103114370023105375.jpg?ca=3&ce=1&s=1024x768',
+        name:'Nagarkot',
     },
     {
         id:5,
-        img:'https://farm8.staticflickr.com/7576/16127448190_159b0b4065_o.jpg',
-        name:'Manang',
+        img:'https://cdn.kimkim.com/files/a/content_articles/featured_photos/0a99949f58bc92145369e8363c64c33bfd85f819/big-68acc559aad8def0f326f4d62e8faf78.jpg',
+        name:'Pokhara',
     },
     {
         id:6,
-        img:'https://assets.rumsan.com/clients/recordnepal/QmUYJRBTPvHVuvtcz4Lz86TUzp43PCyWQTwcnALuxDkfAg',
-        name:'Bhairawa ',
-    },
-    {
-        id:7,
         img:'https://nepaltourismhub.com/illion-asset/uploads/2020/01/butwal-1.jpg',
         name:'Butwal',
-    },
-    {
-        id:8,
-        img:'https://tigerencounter.com/wp-content/uploads/2019/11/Langtang-National-Park.jpg',
-        name:'langtang',
-    },
-    {
-        id:9,
-        img:'https://fulltimeexplorer.com/wp-content/uploads/2019/06/The-Rani-Mahal-Tansen-Palpa-Nepal-1-1.jpg',
-        name:'Palpa',
-    },
-    
+    }
 ]
