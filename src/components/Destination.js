@@ -24,8 +24,8 @@ const Destination = () => {
 
                                 <div className="group relative w-[400px]  inline-block ">
                                     <img className=" relative h-[300px] w-full inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300" src={item.img} alt="" />
-                                    <div class="absolute bottom-0 left-0 right-0 px-4 ml-2 py-2 bg-gray-800 h-[60px] w-[386px] group-hover:w-[401px] group-hover:ml-0 ease-in-out duration-300">
-                                        <h3 class="text-xl text-white font-bold text-center mt-2">
+                                    <div className="absolute bottom-0 left-0 right-0 px-4 ml-2 py-2 bg-gray-800 h-[60px] w-[386px] group-hover:w-[401px] group-hover:ml-0 ease-in-out duration-300">
+                                        <h3 className="text-xl text-white font-bold text-center mt-2">
                                             {item.name}</h3>
 
                                     </div>

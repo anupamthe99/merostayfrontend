@@ -16,19 +16,15 @@
 }
 
 
-.header-hotel{
+/* .header-hotel{ */
     /* background-image:linear-gradient(to right,#414141,#000000),url('https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/90/f4/14/scpkathmandu.jpg') ; */
-    background-image: url('https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/90/f4/14/scpkathmandu.jpg');
+    /* background-image: url('https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/90/f4/14/scpkathmandu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color:rgb(17,24,39);
-<<<<<<< Updated upstream
-    font-family: 'Source Sans Pro', sans-serif;
-}
-=======
-    font-family: 'Source Sans Pro', sans-serif; */
-}
+    font-family: 'Source Sans Pro', sans-serif; 
+} */
 
 .signup-banner{
     background-image:url("./assets/signup_banner.png");
@@ -47,4 +43,3 @@
                     
                     
                     inline-flex items-center mr-8*/
->>>>>>> Stashed changes

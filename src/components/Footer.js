@@ -1,72 +1,73 @@
 import React from 'react'
 import {BsInstagram,BsFacebook,BsWhatsapp,BsTwitter} from 'react-icons/bs'
+import {Link} from 'react-router-dom'
 const Footer = () => {
   return (
     <div className="footer-merostay">
         
         
 
-<footer class="relative bg-blueGray-200 pt-8 pb-6">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-wrap text-left lg:text-left">
-      <div class="w-full lg:w-6/12 px-4">
-        <h4 class="text-3xl fonat-semibold text-blueGray-700">Let's keep in touch!</h4>
-        <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+<footer className="relative bg-blueGray-200 pt-8 pb-6">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-wrap text-left lg:text-left">
+      <div className="w-full lg:w-6/12 px-4">
+        <h4 className="text-3xl fonat-semibold text-blueGray-700">Let's keep in touch!</h4>
+        <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
           Connect with merostay.com 
         </h5>
-        <div class="mt-6 lg:mb-0 mb-6 ">
-          <button class=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-          <BsInstagram size={40}/></button><button class="ml-4 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-          <BsFacebook size={40}/></button><button class="ml-4  shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-            <BsWhatsapp size={40}/></button><button class="ml-4 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+        <div className="mt-6 lg:mb-0 mb-6 ">
+          <button className=" text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+          <BsInstagram size={40}/></button><button className="ml-4 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+          <BsFacebook size={40}/></button><button className="ml-4  shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <BsWhatsapp size={40}/></button><button className="ml-4 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
             <BsTwitter size={40}/>
           </button>
         </div>
       </div>
-      <div class="w-full lg:w-6/12 px-4">
-        <div class="flex flex-wrap items-top mb-6">
-          <div class="w-full lg:w-4/12 px-4 ml-auto">
-            <span class="block uppercase  text-sm font-semibold mb-2">Useful Links</span>
-            <ul class="list-unstyled">
+      <div className="w-full lg:w-6/12 px-4">
+        <div className="flex flex-wrap items-top mb-6">
+          <div className="w-full lg:w-4/12 px-4 ml-auto">
+            <span className="block uppercase  text-sm font-semibold mb-2">Useful Links</span>
+            <ul className="list-unstyled">
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
+                <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" to="/about">About Us</Link>
               </li>
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=njs-profile">merostay Blog</a>
+                <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" >merostay Blog</Link>
               </li>
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.github.com/creativetimofficial?ref=njs-profile">merostay Packages</a>
+                <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" >merostay Packages</Link>
               </li>
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">merosstay Hotels</a>
+                <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" to="/hotels">merosstay Hotels</Link>
               </li>
             </ul>
           </div>
-          <div class="w-full lg:w-4/12 px-4">
-            <span class="block uppercase  text-sm font-semibold mb-2">Other Resources</span>
-            <ul class="list-unstyled">
+          <div className="w-full lg:w-4/12 px-4">
+            <span className="block uppercase  text-sm font-semibold mb-2">Other Resources</span>
+            <ul className="list-unstyled">
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">Packages </a>
+                <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" >Packages </Link>
               </li>
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" >Terms &amp; Conditions</Link>
               </li>
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" >Privacy Policy</Link>
               </li>
               <li>
-                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                <Link className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" to="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <hr class="my-6 border-blueGray-300"/>
-    <div class="flex flex-wrap items-center md:justify-between justify-center">
-      <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-        <div class="text-sm  font-semibold py-1">
-          Copyright © <span id="get-current-year">2022</span><a href="https://www.creative-tim.com/product/notus-js" class=" hover:text-gray-800" target="_blank"> merostay.com</a>
+    <hr className="my-6 border-blueGray-300"/>
+    <div className="flex flex-wrap items-center md:justify-between justify-center">
+      <div className="w-full md:w-4/12 px-4 mx-auto text-center">
+        <div className="text-sm  font-semibold py-1">
+          Copyright © <span id="get-current-year">2022</span><Link href="://wtive-tim.com/product/notus-js" className=" hover:text-gray-800" target="_blank"> merostay.com</Link>
           
         </div>
       </div>

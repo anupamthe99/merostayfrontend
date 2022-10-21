@@ -4,7 +4,7 @@ const Openingsoon = ({visible,close_visbile}) => {
     if (!visible) return null;
 
   return (
-    <div className="opening-soon-merostay">
+    <div className="opening-soon-merostay  z-10">
         <div onClick={close_visbile} className="fixed inset-0 bg-[[rgb(17,24,39)]] bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
             <div className="bg-[#020917] text-4xl text-white p-10 rounded-3xl h-[400px] font-bold w-[800px]">
                 <h1 className="mt-[14%]">
