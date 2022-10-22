@@ -8,37 +8,37 @@ const Hotels = () => {
   const close_visbile=()=>setVisible(false)
   const [hotels,setHotels]=useState([{
     id:1,
-    name:"Solti",
+    name:"MSHotel 1",
     img:"https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/90/f4/14/scpkathmandu.jpg"
 },
 {
     id:2,
-    name:"Everest",
+    name:"MSHotel 2",
     img:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/251085752.jpg?k=b115d6fff4718a177c2a1d43426a5f6f079168832f721f44aa1a3aff7e7347f5&o=&hp=1"
 },
 {
     id:3,
-    name:"Yak and yeti",
+    name:"MSHotel 3",
     img:"https://www.yakandyeti.com/templates/yootheme/cache/slide4-7f44eb04.jpeg"
 },
 {
     id:4,
-    name:"Ambassador ",
+    name:"MSHotel 4",
     img:"https://q-xx.bstatic.com/xdata/images/hotel/840x460/317985378.jpg?k=11ec3c955ff05a858aca2a6adec11a963809009870e995c300c41d9affefa32c&o="
 },
 {
     id:5,
-    name:"Shankar",
+    name:"MSHotel 5",
     img:"https://images.squarespace-cdn.com/content/v1/53ecd1bde4b0a6f9524254f8/1408787712126-YOPVCUUW1LBVH8IIKQP0/morning_web_fixed.jpg"
 },
 {
     id:6,
-    name:"Himalaya",
+    name:"MSHotel 6",
     img:"https://hotelhimalaya.com.np/images/slideshow/Cx1yR-ext.jpg"
 },
 {
     id:7,
-    name:"Anna purana",
+    name:"MSHotel 7",
     img:"https://www.nepal-travel-guide.com/wp-content/uploads/2020/05/image-156.png"
 },])
 
