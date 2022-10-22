@@ -16,7 +16,7 @@ const Destination = () => {
         <div>
             <h1 className='text-5xl text-center mb-8 mt-3'>HOTELS BASED ON CITIES</h1>
             <div className=' flex items-center gap-8'>
-                <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100' size={40} onClick={sliderleft} />
+                <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 ' size={40} onClick={sliderleft} />
                 <div id="slider" className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide">
                     {data.map((item) => {
                         return (

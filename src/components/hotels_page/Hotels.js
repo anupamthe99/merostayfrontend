@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react'
 import {useState} from 'react'
 import {hotels_list} from './Hotellist'
+import Openingsoon from '../../pop_over/Openingsoon'
+
 const Hotels = () => {
+  const [visible,setVisible]=useState(false)
+  const close_visbile=()=>setVisible(false)
   const [hotels,setHotels]=useState([{
     id:1,
     name:"Solti",
@@ -69,11 +73,8 @@ const [newFilterHotel,setNewFilterHotel]=useState([])
           <h2
             className="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
           >
-            Our Hotels 
+            Find the best stay as you desire :
           </h2>
-          <p className="text-body-color text-base">
-           Find the best stay as you desire :
-          </p>
           <div>
             <input type="text" placeholder="search hotel" className="shadow appearance-none border rounded w-[400px] sm:w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-3" onChange={filter_hotels}/>
           </div>
@@ -97,7 +98,7 @@ const [newFilterHotel,setNewFilterHotel]=useState([])
           </div>
           <div>
             <span
-              className="mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white bg-green-400 hover:bg-green-700 ease-in-out duration-300 hover:scale-110 cursor-pointer"
+              className="mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white bg-green-400 hover:bg-green-700 ease-in-out duration-300 hover:scale-110 cursor-pointer" onClick={()=>setVisible(!visible)}
             >
               Book Now
             </span>
@@ -126,7 +127,7 @@ const [newFilterHotel,setNewFilterHotel]=useState([])
           </div>
           <div>
             <span
-              className="mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white bg-green-400 hover:bg-green-700 ease-in-out duration-300 hover:scale-110 cursor-pointer"
+              className="mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white bg-green-400 hover:bg-green-700 ease-in-out duration-300 hover:scale-110 cursor-pointer" onClick={()=>setVisible(!visible)}
             >
               Book Now
             </span>
@@ -142,6 +143,7 @@ const [newFilterHotel,setNewFilterHotel]=useState([])
   )
 }) }
 
+<Openingsoon close_visbile={close_visbile} visible={visible}/>
 
 
 
