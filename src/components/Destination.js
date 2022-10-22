@@ -1,8 +1,11 @@
 import React from 'react'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import { data } from './DestinationImgList'
-const Destination = () => {
-
+import Openingsoon from '../pop_over/Openingsoon'
+import { useState } from 'react'
+    const Destination = () => {
+    const [visible,setVisible]=useState(false)
+  const close_visbile=()=>setVisible(false)
     const sliderleft = () => {
         var slider = document.getElementById('slider')
         slider.scrollLeft = slider.scrollLeft - 500
@@ -22,7 +25,7 @@ const Destination = () => {
                         return (
                             <>
 
-                                <div className="group relative w-[400px]  inline-block ">
+                                <div className="group relative w-[400px]  inline-block " onClick={()=>setVisible(!visible)}>
                                     <img className=" relative h-[300px] w-full inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300" src={item.img} alt="" />
                                     <div className="absolute bottom-0 left-0 right-0 px-4 ml-2 py-2 bg-gray-800 h-[60px] w-[386px] group-hover:w-[401px] group-hover:ml-0 ease-in-out duration-300">
                                         <h3 className="text-xl text-white font-bold text-center mt-2">
@@ -43,7 +46,7 @@ const Destination = () => {
 
 
             </div>
-
+            <Openingsoon close_visbile={close_visbile} visible={visible}/>
         </div>
     )
 }
