@@ -88,7 +88,7 @@ const Booking = () => {
               for="date"
               className="mb-3 block text-base font-medium text-white"
             >
-              Check in 
+              Check out 
             </label>
             <input
               type="date"
