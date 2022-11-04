@@ -13,7 +13,7 @@ const Booking = () => {
     setDrop(false)
   }
   const setHostelType=()=>{
-    setDropword('Hostel')
+    setDropword('Hostel/PG')
     setDrop(false)
   }
   const setResortType=()=>{
