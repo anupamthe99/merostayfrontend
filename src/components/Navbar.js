@@ -144,6 +144,7 @@ export const Nav = () => {
                                                     aria-label="Our product"
                                                     title="Our product"
                                                     className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
                                                 >
                                                     Home
                                                 </Link>
@@ -154,6 +155,7 @@ export const Nav = () => {
                                                     aria-label="Our product"
                                                     title="Our product"
                                                     className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
                                                 >
                                                     Hotels
                                                 </Link>
@@ -164,6 +166,7 @@ export const Nav = () => {
                                                     aria-label="Product pricing"
                                                     title="Product pricing"
                                                     className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
                                                 >
                                                     Booking
                                                 </Link>
@@ -174,6 +177,7 @@ export const Nav = () => {
                                                     aria-label="contact us"
                                                     title="Contact us"
                                                     className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
                                                 >
                                                     Contact us
                                                 </Link>
@@ -184,6 +188,7 @@ export const Nav = () => {
                                                     aria-label="Sign in"
                                                     title="Sign in"
                                                     className="font-medium tracking-wide inline-flex items-center justify-center  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
                                                 >
                                                     Sign in
                                                 </Link>
@@ -194,6 +199,7 @@ export const Nav = () => {
                                                     className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md  focus:shadow-outline focus:outline-none"
                                                     aria-label="Sign up"
                                                     title="Sign up"
+                                                    onClick={()=>setIsMenuOpen(!isMenuOpen)}
                                                 >
                                                     <p></p>
                                                     Sign up

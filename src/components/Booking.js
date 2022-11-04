@@ -98,7 +98,7 @@ const Booking = () => {
 
 {drop ?  <ul className="bg-[rgb(34,45,63)] p-3 mt-3 rounded-xl">
         <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setHotelType}>Hotel</li>
-        <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setHostelType}>Hostel</li>
+        <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setHostelType}>Hostel/PG</li>
         <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setResortType}>Resort</li>
       </ul>: ""}
      
