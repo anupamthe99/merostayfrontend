@@ -15,17 +15,17 @@ const Booking = () => {
   const setHotelType=()=>{
     setDropword('Hotels')
     setDrop(false)
-    setDest('Hotels')
+    setDest('HOTELS')
   }
   const setHostelType=()=>{
     setDropword('Hostels/PG')
     setDrop(false)
-    setDest('Hostels/PG')
+    setDest('HOSTELS/PG')
   }
   const setResortType=()=>{
     setDropword('Resorts')
     setDrop(false)
-    setDest('Resorts')
+    setDest('RESORTS')
   }
   const setCalendar=()=>{
     const inputDateElement = document.querySelector('input[type="date"]');
