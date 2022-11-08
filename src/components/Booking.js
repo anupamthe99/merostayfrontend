@@ -2,23 +2,34 @@ import React from 'react'
 import Openingsoon from '../pop_over/Openingsoon'
 import {useState} from 'react'
 import {RiArrowDropDownLine} from 'react-icons/ri'
+import { useContext } from 'react'
+import {AppContext} from '../App'
 const Booking = () => {
   const [visible,setVisible]=useState(false)
   const close_visbile=()=>setVisible(false)
   const [drop,setDrop]=useState(false)
   const [dropword,setDropword]=useState("Type of Property")
 
+  const {dest,setDest}=useContext(AppContext);
+
   const setHotelType=()=>{
-    setDropword('Hotel')
+    setDropword('Hotels')
     setDrop(false)
+    setDest('Hotels')
   }
   const setHostelType=()=>{
-    setDropword('Hostel/PG')
+    setDropword('Hostels/PG')
     setDrop(false)
+    setDest('Hostels/PG')
   }
   const setResortType=()=>{
-    setDropword('Resort')
+    setDropword('Resorts')
     setDrop(false)
+    setDest('Resorts')
+  }
+  const setCalendar=()=>{
+    const inputDateElement = document.querySelector('input[type="date"]');
+    inputDateElement.showPicker();
   }
 
   return (
@@ -97,9 +108,9 @@ const Booking = () => {
       </div>
 
 {drop ?  <ul className="bg-[rgb(34,45,63)] p-3 mt-3 rounded-xl">
-        <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setHotelType}>Hotel</li>
-        <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setHostelType}>Hostel/PG</li>
-        <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setResortType}>Resort</li>
+        <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setHotelType}>Hotels</li>
+        <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setHostelType}>Hostels/PG</li>
+        <li className='hover:bg-[rgb(22,33,50)] mt-2 cursor-pointer p-2 ' onClick={setResortType}>Resorts</li>
       </ul>: ""}
      
     </div>
@@ -120,6 +131,7 @@ const Booking = () => {
               name="date"
               id="date"
               className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              onClick={setCalendar}
             />
           </div>
         </div>
@@ -136,6 +148,7 @@ const Booking = () => {
               name="date"
               id="date"
               className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              onClick={setCalendar}
             />
           </div>
         </div>

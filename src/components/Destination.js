@@ -3,9 +3,15 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import { data } from './DestinationImgList'
 import Openingsoon from '../pop_over/Openingsoon'
 import { useState } from 'react'
+import {useContext} from 'react';
+import {AppContext} from '../App';
+
     const Destination = () => {
+
+    const {dest} =useContext(AppContext);
+
     const [visible,setVisible]=useState(false)
-  const close_visbile=()=>setVisible(false)
+    const close_visbile=()=>setVisible(false)
     const sliderleft = () => {
         var slider = document.getElementById('slider')
         slider.scrollLeft = slider.scrollLeft - 500
@@ -17,7 +23,7 @@ import { useState } from 'react'
 
     return (
         <div>
-            <h1 className='text-5xl text-center mb-8 mt-3'>HOTELS BASED ON CITIES</h1>
+            <h1 className='text-5xl text-center mb-8 mt-3'>{dest} BASED ON CITIES</h1>
             <div className=' flex items-center gap-8'>
                 <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 ' size={40} onClick={sliderleft} />
                 <div id="slider" className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide">

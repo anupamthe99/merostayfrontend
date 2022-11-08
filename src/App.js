@@ -11,9 +11,18 @@ import Contact from './components/Contact'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Footer from './components/Footer';
 import Hotels from './components/hotels_page/Hotels';
+
+import {useState,createContext} from 'react';
+
+export const AppContext=createContext();
+
 function App() {
+
+  const [dest,setDest]=useState("HOTELS")
+
   return (
     <div className="">
+      <AppContext.Provider value={{dest,setDest}}>
 <Router>
     <Nav/>
   <Routes>
@@ -29,6 +38,7 @@ function App() {
   </Routes>
   <Footer/>
 </Router>
+</AppContext.Provider>
 
     </div>
   );
