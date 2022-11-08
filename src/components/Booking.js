@@ -31,6 +31,10 @@ const Booking = () => {
     const inputDateElement = document.querySelector('input[type="date"]');
     inputDateElement.showPicker();
   }
+  const setCalendar1=()=>{
+    const inputDateElement = document.querySelector('input[name="date1"]');
+    inputDateElement.showPicker();
+  }
 
   return (
     <div className="booking  text-white">
@@ -145,10 +149,10 @@ const Booking = () => {
             </label>
             <input
               type="date"
-              name="date"
+              name="date1"
               id="date"
               className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              onClick={setCalendar}
+              onClick={setCalendar1}
             />
           </div>
         </div>
