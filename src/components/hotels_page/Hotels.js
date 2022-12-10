@@ -2,45 +2,61 @@ import React, { useEffect } from 'react'
 import {useState} from 'react'
 import {hotels_list} from './Hotellist'
 import Openingsoon from '../../pop_over/Openingsoon'
-
+import Axios from 'axios'
+import {Link} from 'react-router-dom'
 const Hotels = () => {
+
+  const [hotelname,sethotelname]=useState('')
+  useEffect(()=>{
+      Axios.get(`https://backendmerostay-production.up.railway.app/api/hotel/`).then((res)=>{
+        // console.log("api fetching")
+        console.log(res.data)
+        setHotels(res.data)
+      })
+  },[])
+
+
+
   const [visible,setVisible]=useState(false)
   const close_visbile=()=>setVisible(false)
-  const [hotels,setHotels]=useState([{
-    id:1,
-    name:"MSHotel 1",
-    img:"https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/90/f4/14/scpkathmandu.jpg"
-},
-{
-    id:2,
-    name:"MSHotel 2",
-    img:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/251085752.jpg?k=b115d6fff4718a177c2a1d43426a5f6f079168832f721f44aa1a3aff7e7347f5&o=&hp=1"
-},
-{
-    id:3,
-    name:"MSHotel 3",
-    img:"https://www.yakandyeti.com/templates/yootheme/cache/slide4-7f44eb04.jpeg"
-},
-{
-    id:4,
-    name:"MSHotel 4",
-    img:"https://q-xx.bstatic.com/xdata/images/hotel/840x460/317985378.jpg?k=11ec3c955ff05a858aca2a6adec11a963809009870e995c300c41d9affefa32c&o="
-},
-{
-    id:5,
-    name:"MSHotel 5",
-    img:"https://images.squarespace-cdn.com/content/v1/53ecd1bde4b0a6f9524254f8/1408787712126-YOPVCUUW1LBVH8IIKQP0/morning_web_fixed.jpg"
-},
-{
-    id:6,
-    name:"MSHotel 6",
-    img:"https://hotelhimalaya.com.np/images/slideshow/Cx1yR-ext.jpg"
-},
-{
-    id:7,
-    name:"MSHotel 7",
-    img:"https://www.nepal-travel-guide.com/wp-content/uploads/2020/05/image-156.png"
-},])
+
+  const [hotels,setHotels]=useState([])
+
+//   const [hotels,setHotels]=useState([{
+//     id:1,
+//     name:"MSHotel 1",
+//     img:"https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/90/f4/14/scpkathmandu.jpg"
+// },
+// {
+//     id:2,
+//     name:"MSHotel 2",
+//     img:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/251085752.jpg?k=b115d6fff4718a177c2a1d43426a5f6f079168832f721f44aa1a3aff7e7347f5&o=&hp=1"
+// },
+// {
+//     id:3,
+//     name:"MSHotel 3",
+//     img:"https://www.yakandyeti.com/templates/yootheme/cache/slide4-7f44eb04.jpeg"
+// },
+// {
+//     id:4,
+//     name:"MSHotel 4",
+//     img:"https://q-xx.bstatic.com/xdata/images/hotel/840x460/317985378.jpg?k=11ec3c955ff05a858aca2a6adec11a963809009870e995c300c41d9affefa32c&o="
+// },
+// {
+//     id:5,
+//     name:"MSHotel 5",
+//     img:"https://images.squarespace-cdn.com/content/v1/53ecd1bde4b0a6f9524254f8/1408787712126-YOPVCUUW1LBVH8IIKQP0/morning_web_fixed.jpg"
+// },
+// {
+//     id:6,
+//     name:"MSHotel 6",
+//     img:"https://hotelhimalaya.com.np/images/slideshow/Cx1yR-ext.jpg"
+// },
+// {
+//     id:7,
+//     name:"MSHotel 7",
+//     img:"https://www.nepal-travel-guide.com/wp-content/uploads/2020/05/image-156.png"
+// },])
 
 const [newFilterHotel,setNewFilterHotel]=useState([])
 
@@ -90,21 +106,23 @@ const [newFilterHotel,setNewFilterHotel]=useState([])
     <div className="w-full px-4 md:w-1/2 lg:w-1/4 bg-[rgb(5, 8, 15)] shadow-2xl shadow-black">
         <div className="mx-auto mb-10 max-w-[370px] ">
           <div className="mb-8 overflow-hidden rounded ">
-            <img
+            {/* <img
               src={hotel.img}
               alt="image"
               className="w-full h-[220px]"
-            />
+            /> */}
           </div>
           <div>
             <span
               className="mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white bg-green-400 hover:bg-green-700 ease-in-out duration-300 hover:scale-110 cursor-pointer" onClick={()=>setVisible(!visible)}
             >
+              <Link to={`${hotel.slug}`}>
               Book Now
+              </Link>
             </span>
             <h3 className='text-2xl font-bold'>
               
-                {hotel.name}
+                {hotel.hotel_name}
               
             </h3>
           </div>
@@ -119,21 +137,23 @@ const [newFilterHotel,setNewFilterHotel]=useState([])
     <div className="w-full px-4 md:w-1/2 lg:w-1/4 bg-[rgb(5, 8, 15)] py-3 shadow-2xl shadow-black ">
         <div className="mx-auto mb-10 max-w-[370px]">
           <div className="mb-8 overflow-hidden rounded">
-            <img
+            {/* <img
               src={hotel.img}
               alt="image"
               className="w-full h-[220px]"
-            />
+            /> */}
           </div>
           <div>
             <span
               className="mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white bg-green-400 hover:bg-green-700 ease-in-out duration-300 hover:scale-110 cursor-pointer" onClick={()=>setVisible(!visible)}
             >
+             <Link to={`${hotel.slug}`}>
               Book Now
+              </Link>
             </span>
             <h3 className='text-2xl font-bold'>
               
-                {hotel.name}
+                {hotel.hotel_name}
               
             </h3>
           </div>

@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Hotels from './components/hotels_page/Hotels';
 
 import {useState,createContext} from 'react';
+import Hotel_detail from './components/hotels_page/Hotel_detail';
 
 export const AppContext=createContext();
 
@@ -32,6 +33,7 @@ function App() {
     <Route path="/signup" element={<Signup/>}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/hotels" element={<Hotels/>}/>
+    <Route path="/hotels/:slug" element={<Hotel_detail/>}/>
     <Route path="/contact" element={<Contact/>}/>
     <Route path="*" element={<h1 className="text-6xl text-center my-[10%]">404 page not found</h1>}/>
     {/* <Route path="/op" element={<Openingsoon/>}/> */}
